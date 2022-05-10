@@ -41,10 +41,12 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "app_shell",
+      name: "application_shell",
       filename: "remoteEntry.js",
       remotes: {
-        Login: "login@http://localhost:3001/remoteEntry.js"
+        application: "application_shell@http://localhost:3000/remoteEntry.js",
+        component: "component_shell@http://localhost:3001/remoteEntry.js",
+        authentication: "authentication_shell@http://localhost:3002/remoteEntry.js"
       },
       exposes: {},
       shared: {
