@@ -1,0 +1,20 @@
+{
+  "name": "module-federation",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "login",
+      "componentshell",
+      "home",
+      "app-shell"
+    ]
+  },
+  "scripts": {
+    "kill-ports": "npx kill-port 3000 3001 3002 3003",
+    "start": "npm run kill-ports && lerna run --parallel start",
+    "build": "lerna run build"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
