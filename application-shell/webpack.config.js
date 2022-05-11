@@ -48,7 +48,9 @@ module.exports = {
         component: "component_shell@http://localhost:3001/remoteEntry.js",
         authentication: "authentication_shell@http://localhost:3002/remoteEntry.js"
       },
-      exposes: {},
+      exposes: {
+        "./Main": "./src/components/Main.jsx",
+      },
       shared: {
         ...deps,
         react: {
