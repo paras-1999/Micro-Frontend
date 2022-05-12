@@ -15,9 +15,9 @@ export default function NavigationBar() {
           className="d-inline-block align-top"
         /></Navbar.Brand>
     <Nav className="me-auto">
-      <Nav.Link >Home</Nav.Link>
+      <Nav.Link href="/" >Home</Nav.Link>
       <Nav.Link >Features</Nav.Link>
-      <Nav.Link >Profile</Nav.Link>
+      <Nav.Link href="/profile">Profile</Nav.Link>
     </Nav>
     </Container>
    

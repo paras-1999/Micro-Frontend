@@ -31,3 +31,11 @@ services:
     container_name: 'componentshell'
     ports:
       - '3003:3003'
+
+  profile:
+    build: 
+      context: ./profile
+      dockerfile: Dockerfile
+    container_name: 'profile'
+    ports:
+      - '3004:3004'

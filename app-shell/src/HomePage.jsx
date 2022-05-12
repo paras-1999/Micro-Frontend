@@ -6,7 +6,9 @@ export default function HomePage() {
   return (
       <>
     <NavigationBar/>
+    <div className='homeArea'>
     <Outlet/>
+    </div>
     <Footer/>
     </>
   )
