@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  app-shell:
+    build: 
+      context: ./app-shell
+      dockerfile: Dockerfile
+    container_name: 'app-shell'
+    ports:
+      - '3000:3000'
+      
+  login:
+    build: 
+      context: ./login
+      dockerfile: Dockerfile
+    container_name: 'login'
+    ports:
+      - '3001:3001'
+
+  home:
+    build: 
+      context: ./home
+      dockerfile: Dockerfile
+    container_name: 'home'
+    ports:
+      - '3002:3002'
+
+  componentshell:
+    build: 
+      context: ./componentshell
+      dockerfile: Dockerfile
+    container_name: 'componentshell'
+    ports:
+      - '3003:3003'
