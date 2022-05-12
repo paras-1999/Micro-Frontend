@@ -1,15 +1,13 @@
 # Installtion and Usage
 ## Step : 1 
-installation of lerna 
+install and run  
 ```
-npm i -g lerna
+docker-compose up
 ```
 
 ## Step : 2
-Click on `./install.sh` to install all the dependences
-
-## Step : 3
-open Command prompt and run 
+start te server
+go inside server folder and run
 ```
-npm start
+npm run start:dev
 ```
