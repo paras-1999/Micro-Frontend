@@ -13,7 +13,7 @@ export default function Login() {
     event.preventDefault()
     loginCall(username,password).then(()=>
     sessionStorage.setItem("_token",jwt.value)
-    ,navigate("/home")
+    ,navigate("/")
     )
   }
   return (
