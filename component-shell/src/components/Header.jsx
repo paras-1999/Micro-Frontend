@@ -1,8 +1,18 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { Navbar, Container, Nav, Button } from "react-bootstrap"
-import { useNavigate } from "react-router-dom"
+import { useNavigate,Link } from "react-router-dom"
 export default function Header() {
   const navigate = useNavigate()
+  const [logInCheck, setLogInCheck] = useState(false)
+  useEffect(() => {
+   if(sessionStorage.getItem("_token")){
+     setLogInCheck(true)
+   }
+   else{
+     setLogInCheck(false)
+   }
+  }, [])
+  
   return (
     <>
       <Navbar bg="light" variant="light">
@@ -15,13 +25,18 @@ export default function Header() {
               className="d-inline-block align-top"
             /></Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/" >Home</Nav.Link>
-            <Nav.Link >Features</Nav.Link>
-            <Nav.Link href="/profile">Profile</Nav.Link>
+            <Link to="/" className="nav-link" >Home</Link>
+            <Nav.Link >About</Nav.Link>
+            {logInCheck && <Link to="/profile" className="nav-link">Profile</Link>}
           </Nav>
         </Container>
-
-        <Button size="sm" variant='dark' className='me-3' onClick={() => { navigate("/login") }}>Log Out</Button>
+        {logInCheck?
+        <Button size="sm" variant='dark' className='me-3' onClick={() => { navigate("/login");sessionStorage.removeItem("_token")}}>Log Out</Button>
+        :
+        <>
+        <Button size="sm" variant='dark' className='me-3' onClick={() => { navigate("/login") }}>Log In</Button>
+        <Button size="sm" variant='dark' className='me-3' onClick={() => { navigate("/signup") }}>Sign Up</Button>
+        </> }
 
       </Navbar>
     </>
