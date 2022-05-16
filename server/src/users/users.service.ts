@@ -20,7 +20,7 @@ export class UsersService {
     },
     {
       userId: 2,
-      username: 'maria',
+      username: 'maria@gmail.com',
       password: '123',
       description:"i am good girl",
       img:"https://www.thetechoutlook.com/wp-content/uploads/2021/10/In-My-Hero-Academia-how-old-is-Deku-or-Izuku-Midoriya.jpg"
