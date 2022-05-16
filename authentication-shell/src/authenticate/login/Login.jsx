@@ -1,9 +1,9 @@
 import React,{useState} from 'react'
 import { Form ,Button} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "../index.css"
+import "../../index.css"
 import {useNavigate} from "react-router-dom"
-import { loginCall,jwt } from '../services/service';
+import { loginCall,jwt } from '../../services/service';
 
 export default function Login() {
   const navigate= useNavigate()

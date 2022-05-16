@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react'
-import { getProfile, jwt } from '../services/service'
-import "../index.css"
+import { getProfile, jwt } from '../../services/service'
+import "../../index.css"
 export default function Profile() {
   const [user, setUser] = useState(null)
     useEffect(() => {

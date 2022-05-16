@@ -49,9 +49,9 @@ module.exports = {
         authentication: "authentication_shell@http://localhost:3002/remoteEntry.js"
       },
       exposes: {
-        "./Login": "./src/authenticate/Login.jsx",
-        "./Register": "./src/authenticate/Register.jsx",
-        "./Profile": "./src/authenticate/Profile.jsx",
+        "./Login": "./src/authenticate/login/Login.jsx",
+        "./Register": "./src/authenticate/register/Register.jsx",
+        "./Profile": "./src/authenticate/profile/Profile.jsx",
 
       },
       shared: {
