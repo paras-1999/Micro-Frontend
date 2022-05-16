@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import "./index.css";
-import Main from "application/Main";
+import AppRoutes from "./AppRoutes";
 
 const App = () => (
   <div>
-    <Main />
+    <AppRoutes />
   </div>
 );
 ReactDOM.render(<App />, document.getElementById("app"));

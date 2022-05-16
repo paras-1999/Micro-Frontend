@@ -49,7 +49,7 @@ module.exports = {
         authentication: "authentication_shell@http://localhost:3002/remoteEntry.js"
       },
       exposes: {
-        "./Main": "./src/components/Main.jsx",
+
       },
       shared: {
         ...deps,
