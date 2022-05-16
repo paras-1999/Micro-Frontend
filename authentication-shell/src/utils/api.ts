@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const getDefaultPath = () => {
-  return "http://localhost:8000"
+  return "http://localhost:8080"
 }
 
 const transformResponse = (input: string) => {
